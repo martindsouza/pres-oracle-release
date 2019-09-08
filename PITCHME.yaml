@@ -59,3 +59,6 @@ published : true
 #
 title: "Oracle DB Build Process"
 charts : true
+
+# So users can see this via public URL
+published : true
