@@ -1,0 +1,32 @@
+@startuml
+
+start
+
+:development;
+  note right
+    ~ 2 week sprint
+  end note
+:build release;
+  note right
+    Prep, automation, etc
+    Usually done via script
+  end note
+:release;
+  note right
+    Dev to Test
+    <i>Manual process *</i>
+  end note
+:tag code;
+  note right
+    Semantic versioning
+    <i>(major.minor.patch)</i>
+  end note
+:post-release;
+  note right
+    Cleanup
+    "empty" <pre>/release</pre> folder
+  end note
+
+stop (end sprint)
+
+@enduml

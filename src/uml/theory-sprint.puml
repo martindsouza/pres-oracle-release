@@ -1,0 +1,9 @@
+@startuml
+start
+:development;
+:build release;
+:release;
+:tag code;
+:post-release;
+stop
+@enduml

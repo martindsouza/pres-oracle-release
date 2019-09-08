@@ -1,0 +1,52 @@
+.shadow {
+  box-shadow:0 14px 20px 0 rgba(0,0,0,0.2),0 10px 24px 0 rgba(0,0,0,0.19) !important;
+}
+
+/* LISTS */
+ul.no-list-style {
+  list-style-type: none;
+}
+
+/* Line up the icons in a list */
+ul.no-list-style .fa, ul.no-list-style .fab {
+  min-width: 1.6em;
+  text-align: center;
+}
+
+
+/* TABLES */
+/* Center table text in a snap */
+.text-center td{
+  text-align: center !important;
+}
+
+/* Colors */
+.text-red{color: red !important;}
+.text-grey{color: grey !important;}
+
+/* Warnings */
+.text-success{
+  color: #28a745 !important;
+}
+/* text-info */
+
+.text-warning {
+  color: #ffc107 !important;
+}
+
+.text-danger {
+  color: #dc3545 !important;
+}
+
+
+/* Image test */
+.reveal img.clean-img {
+  border: none;
+  box-shadow: none;
+  background: none;
+}
+
+.reveal img.clip-img {
+  clip-path: circle(35% at 50% 50%);
+  -webkit-clip-path: circle(35% at 50% 50%);
+}

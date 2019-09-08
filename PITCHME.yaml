@@ -1,0 +1,61 @@
+#
+# GitPitch Quickstart Sample Deck
+#
+
+# 
+# Theme Setting
+# Doc: https://gitpitch.com/docs/themes/default
+#
+theme : template
+theme-background : [ "#FFF" ]
+theme-headline   : [ "Raleway", "#505152", "none" ]
+theme-byline     : [ "Raleway", "#111111", "none" ]
+theme-text       : [ "Ubuntu", "#1C1C1C", "none" ]
+theme-links      : [ "#5384AD", "#5254F7" ]
+theme-code       : [ "Source Code Pro" ]
+theme-controls   : [ "#484848" ]
+theme-margins    : [ "0", "15px" ]
+
+#
+# Code Highlight Setting
+# Doc: https://gitpitch.com/docs/settings/highlight
+#
+# Code Themes: https://highlightjs.org/static/demo/
+highlight        : solarized-light
+# highlight        : monokai
+
+#
+# Theme-Override Setting
+# Doc: https://gitpitch.com/docs/settings/custom-theme
+#
+theme-override: assets/css/PITCHME.css
+
+#
+# Logo Setting
+# https://gitpitch.com/docs/settings/logo
+#
+logo : assets/img/logo.png
+logo-position : top-left
+
+#
+# Layout Setting
+# Doc: https://gitpitch.com/docs/settings/layout
+#
+layout : center
+
+#
+# Footnote Setting
+# Doc: https://gitpitch.com/docs/settings/footnote
+#
+footnote : "Copyright Martin D'Souza"
+
+#
+# Published Setting
+# Doc: https://gitpitch.com/docs/settings/published
+#
+published : true
+
+
+#
+title: "Oracle DB Build Process"
+charts : true
