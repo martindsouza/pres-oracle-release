@@ -35,6 +35,7 @@ Note:
 @ulend
 
 --- 
+
 @snap[north span-100 text-center]
 ## Version Control
 @snapend
@@ -56,9 +57,32 @@ Note:
 
 ---
 
+@snap[north]
+## Guideline
+@snapend
 
 
---- 
+@snap[midpoint span-100]
+
+@ul[no-list-style](true)
+- @fa[calendar] ~2 week Dev sprints @note[This is a major culture change. Need to get business units on board. Can be tough but doable]
+- @fa[code] Dev -> Test = @css[text-red text-italic](Manual release)@note[Each time code leaves development it's a release. Fix the srcutps]
+- @fa[robot] Test -> ... = Auto release @note[Release from tags]
+@ulend
+
+@snapend
+
+
+Note:
+- This is a very simple outline for the process
+- It's simplicity is what makes it doable.
+- Need to get ALL people involved with the process on board
+
+---
+
+@snap[north span-60]
+## Sprint Cycle
+@snapend
 
 @snap[west span-80]
 @code[uml rawcode zoom-15](/src/uml/theory-sprint.puml)
@@ -90,7 +114,7 @@ Note:
 | `/build` | @fa[ban] | Scripts to build release |
 | `/data` |@fa[sync] | Re-runnable data scripts |
 | `/packages` | @fa[sync] |Ex: `pkg_emp.pks` and `pkg_emp.pkb` |
-| @css[text-red text-bold](`/release`) | @fa[times-circle] | _More Later_ |
+| @css[text-red text-bold](`/release`) | @fa[times-circle] | _Release specific_ |
 | @css[text-grey](`/scripts`) | @fa[ban text-grey] | @css[text-grey](Common scripts  | / helpers for developers)  | 
 | `/synonyms` | @fa[sync] | Synonyms |
 | `/views` | @fa[sync] | Views | 
@@ -100,18 +124,23 @@ Note:
 
 ---
 
+@snap[north span-100]
+## Structure: `/release`
+@snapend
 
-Structure: `/release`
 
-- Managed by Devs
-- Truncated after each release
-- `_release.sql` stores release instructions
+@snap[midpoint span-100]
 
+@ul[no-list-style](false)
+- @fa[glasses] Managed by Devs
+- @fa[trash-alt] Emptied after each release
+- @fa[clipboard-list] `_release.sql` File to execute
+@snapend
 
 ---?code=src/_release-highlight.sql&lang=sql zoom-07
 
 @snap[north span-100]
-`/release/_release.sql` Summary
+## `_release.sql`
 @snapend
 
 @snap[south span-100]
@@ -121,12 +150,11 @@ Structure: `/release`
 @[16, zoom-20](Helps avoid managing order of re-runnable code)
 @snapend
 
----
 
 ---?code=src/data_emp.sql&lang=sql zoom-04 code-power
 
 @snap[north span-100]
-Data Script Example
+## `/data/` Script Example
 @snapend
 
 @snap[south span-100]
@@ -138,9 +166,4 @@ Data Script Example
 
 Note: 
 - Goal isn't to memorize this but think about how you could implement such a technique (or similar) within your processes
----
-
-
-### Release Process
-
 
