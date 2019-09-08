@@ -2,6 +2,10 @@
 
 ## Gitpitch
 
+http://localhost:9090/gitpitch/desktop/manager
+
+http://localhost:9090/gitpitch/desktop
+
 ```bash
 
 docker pull gitpitch/desktop:pro
@@ -11,7 +15,7 @@ docker run -it \
   -e PORT=9090 \
 	-p 9090:9090 \
 	gitpitch/desktop:pro
-	
+
 
 docker run -it -d \
   --name=gitpitch \

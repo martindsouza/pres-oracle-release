@@ -85,11 +85,11 @@ Note:
 @snapend
 
 @snap[west span-80]
-@code[uml rawcode zoom-15](/src/uml/theory-sprint.puml)
+@code[uml rawcode zoom-15](/assets/src/uml/theory-sprint.puml)
 @snapend
 
 @snap[east span-20]
-@uml[span-100 bg-white](/src/uml/theory-sprint.puml)
+@uml[span-100 bg-white](/assets/src/uml/theory-sprint.puml)
 @snapend
 
 @snap[south-west span-100]
@@ -137,7 +137,7 @@ Note:
 - @fa[clipboard-list] `_release.sql` File to execute
 @snapend
 
----?code=src/_release-highlight.sql&lang=sql zoom-07
+---?code=assets/src/_release-highlight.sql&lang=sql zoom-07
 
 @snap[north span-100]
 ## `_release.sql`
@@ -151,7 +151,7 @@ Note:
 @snapend
 
 
----?code=src/data_emp.sql&lang=sql zoom-04 code-power
+---?code=assets/src/data_emp.sql&lang=sql zoom-04 code-power
 
 @snap[north span-100]
 ## `/data/` Script Example
