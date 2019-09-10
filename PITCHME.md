@@ -4,11 +4,11 @@
 
 @snap[south span-40 text-08]
 Martin Giffy D'Souza
-http://TODOURL.com
+[bit.ly/oow19-release](http://bit.ly/oow19-release)
 @snapend
 
 Note:
-- TODO https://gitpitch.com/martindsouza/pres-oow-release/master
+- https://gitpitch.com/martindsouza/pres-oracle-release/master
 
 ---?color=black
 

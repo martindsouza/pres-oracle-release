@@ -1,7 +1,8 @@
 
 @snap[north span-100]
-## Martin D'Souza
+## Martin Giffy D'Souza
 @snapend
+
 
 @ul[no-list-style](false)
 
@@ -12,5 +13,12 @@
 - @fa[building] [Insum Solutions](http://www.insum.ca)
 
 @ulend
+
+
+@snap[south]
+[bit.ly/oow19-release](http://bit.ly/oow19-release)
+@snapend
+
+
 
 
