@@ -1,9 +1,11 @@
 @startuml
 start
+' tag::process[]
 :development;
 :build release;
 :release;
 :tag code;
 :post-release;
+' end::process[]
 stop
 @enduml

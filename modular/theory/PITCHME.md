@@ -87,19 +87,19 @@ Note:
 @snapend
 
 @snap[west span-80]
-@code[uml rawcode zoom-15](/assets/src/uml/theory-sprint.puml)
+@code[uml rawcode zoom-15](assets/src/uml/theory-sprint.puml?tags=process)
 @snapend
 
 @snap[east span-20]
-@uml[span-100 bg-white](/assets/src/uml/theory-sprint.puml)
+@uml[span-100 bg-white](assets/src/uml/theory-sprint.puml)
 @snapend
 
 @snap[south-west span-100]
-@[3, zoom-20](~ 2 week sprint)
-@[4, zoom-20](Prep, automation, etc. Usually done via script)
-@[5, zoom-20](Dev to Test. _Manual process_)
-@[6, zoom-20](Semantic versioning: `major.minor.patch`)
-@[7, zoom-20](Cleanup: "empty" `/release`)
+@[1, zoom-20](~ 2 week sprint)
+@[2, zoom-20](Prep, automation, etc. Usually done via script)
+@[3, zoom-20](Dev to Test. _Manual process_)
+@[4, zoom-20](Semantic versioning: `major.minor.patch`)
+@[5, zoom-20](Cleanup: "empty" `/release`)
 @snapend
 
 Note:
