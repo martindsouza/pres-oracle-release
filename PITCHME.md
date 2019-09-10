@@ -15,7 +15,7 @@ Note:
 @fa[plane fa-6x]
 
 Note:
-- TODO see Trello about story of trip to Florida
+- See Trello about story of trip to Florida
 
 
 ---?image=assets/img/soccer-net.jpg&size=cover&opacity=50

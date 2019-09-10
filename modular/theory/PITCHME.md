@@ -16,6 +16,8 @@
 
 
 Note:
+- Focus on what positive VCS is
+- File based development
 - How we store code determines how we move it
 - Good VC practices are important to have
 - Is NOT folders of v1/v2/v3 (could get a pic of this)
@@ -100,6 +102,8 @@ Note:
 @[7, zoom-20](Cleanup: "empty" `/release`)
 @snapend
 
+Note:
+- When doing the manual release process if encounter errors fix them. Don't need to restart.
 
 
 ---
@@ -112,15 +116,23 @@ Note:
 | Folder | Re-Runnable | Description | 
 | --- | --- | --- |
 | `/build` | @fa[ban] | Scripts to build release |
-| `/data` |@fa[sync] | Re-runnable data scripts |
+| `/data` |@fa[sync] | Re-runnable data scripts * |
 | `/packages` | @fa[sync] |Ex: `pkg_emp.pks` and `pkg_emp.pkb` |
-| @css[text-red text-bold](`/release`) | @fa[times-circle] | _Release specific_ |
+| @css[text-red text-bold](`/release`) | @fa[times-circle] | _Release specific*_ |
 | @css[text-grey](`/scripts`) | @fa[ban text-grey] | @css[text-grey](Common scripts  | / helpers for developers)  | 
 | `/synonyms` | @fa[sync] | Synonyms |
 | `/views` | @fa[sync] | Views | 
 | `/www` | @fa[ban] | Web files (for APEX) |
 
 @snapend
+
+
+@snap[south span-100 text-06 text-left text-italic]
+* = More later
+Root path is either `master` (git) or `trunk` (svn)
+@snapend
+
+Note:
 
 ---
 
@@ -150,6 +162,9 @@ Note:
 @[16, zoom-20](Helps avoid managing order of re-runnable code)
 @snapend
 
+Note:
+- Iissue specific items talk about "Alter table " etc
+- Auto generated code put placeholders in the code to "START" and "END" place holders.
 
 ---?code=assets/src/data_emp.sql&lang=sql zoom-04 code-power
 

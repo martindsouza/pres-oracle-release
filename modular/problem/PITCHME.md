@@ -64,7 +64,7 @@ Note:
 @snap[midpoint span-100 text-center]
 | Effort | | 100% Automation |
 | --- | --- | --- |
-| 20% | @fa[arrow-alt-circle-right] | 80% |
+| @css[text-red](20%) | @fa[arrow-alt-circle-right text-red] | @css[text-red](80%) |
 | 100% | @fa[arrow-alt-circle-right] | Full CI/CD |
 @snapend
 
