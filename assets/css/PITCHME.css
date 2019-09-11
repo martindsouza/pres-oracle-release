@@ -8,7 +8,7 @@ ul.no-list-style {
 }
 
 /* Line up the icons in a list */
-ul.no-list-style .fa, ul.no-list-style .fab {
+ul.no-list-style .fa, ul.no-list-style .fab, ul.no-list-style .far {
   min-width: 1.6em;
   text-align: center;
 }

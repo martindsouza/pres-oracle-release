@@ -47,7 +47,7 @@ Simplify Oracle release process
 
 ---?color=#98b741
 
-@fa[question-circle fa-6x]
+@far[question-circle fa-6x]
 
 ---?include=modular/about/PITCHME.md
 

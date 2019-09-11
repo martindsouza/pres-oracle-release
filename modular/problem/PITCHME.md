@@ -9,7 +9,7 @@
 @snapend
 
 @snap[midpoint span-33 text-center]
-@fa[arrow-alt-circle-right fa-3x fa-r]
+@far[arrow-alt-circle-right fa-3x fa-r]
 @snapend
 
 @snap[east span-33 text-center text-20]
@@ -64,8 +64,8 @@ Note:
 @snap[midpoint span-100 text-center]
 | Effort | | 100% Automation |
 | --- | --- | --- |
-| @css[text-red](20%) | @fa[arrow-alt-circle-right text-red] | @css[text-red](80%) |
-| 100% | @fa[arrow-alt-circle-right] | Full CI/CD |
+| @css[text-red](20%) | @far[arrow-alt-circle-right text-red] | @css[text-red](80%) |
+| 100% | @far[arrow-alt-circle-right] | Full CI/CD |
 @snapend
 
 
