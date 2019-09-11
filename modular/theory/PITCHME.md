@@ -177,6 +177,7 @@ Note:
 @[8-9, zoom-30]("Define" data)
 @[11-14, zoom-30](Loop over array and set `l_row`)
 @[17-27, zoom-30](`merge` data)
+@css[text-05 text-italic](@gitlink[download](assets/src/data_emp.sql))
 @snapend
 
 Note: 
