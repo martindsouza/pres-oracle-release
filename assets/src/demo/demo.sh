@@ -7,11 +7,27 @@ cd ~/Documents/GitHub/martindsouza/pres-oracle-release-demo
 git tag -l | xargs -n 1 git push --delete origin
 # Delete local tags
 git tag | xargs git tag -d
-# Drop views directory
-git rm views/*
 git commit -m "Demo prep"
 git push
-mkdir views
+
+
+/oracle/sqlcl/bin/sqlcl giffy/giffy@localhost:9521/xepdb1 << EOF
+drop table oow_demo;
+exit;
+EOF
+
+sqlcl giffy/giffy@localhost:32118/xepdb1 << EOF
+drop table oow_demo;
+exit;
+EOF
+
+
+
+# Open: 
+open https://github.com/martindsouza/pres-oracle-release-demo
+
+
+##### START #####
 
 
 
@@ -29,13 +45,16 @@ code issue-123.sql
 # prompt issue-123 START
 # 
 # -- Note: missing comma on purpose
-# create table demo(
+# create table oow_demo(
 #   demo_id number
 #   demo_code varchar2(123)
 # );
 # 
 # prompt issue-123 END
 
+
+# Modify views
+code ../views/v_emp.sql
 
 
 # Open _release.sql
@@ -54,6 +73,7 @@ code _release.sql
 
 
 # Commit code
+cd ..
 git status
 git add *
 git commit -m "issue-123: Added demo table"
@@ -75,11 +95,15 @@ cd release
 code _release.sql
 
 
-# Connect to Oracle and run manually
+# Connect to Oracle Cloud and run manually
 /oracle/sqlcl/bin/sqlcl giffy/giffy@localhost:9521/xepdb1
+
+# Backup
+#/oracle/sqlcl/bin/sqlcl giffy/giffy@localhost:32118/xepdb1
 
 
 # View fixes
+cd ..
 git status
 
 # Should notice the change in issue-123
@@ -106,12 +130,17 @@ git push
 git branch -d $GIT_PRE_REL_BRANCH
 
 # Delete /release folder
-cd release
-git rm *
+git rm release/*
+mkdir release
+
 # Start new release file
-echo "PROMPT release" >> _release.sql
+echo "PROMPT release" >> release/_release.sql
 # commit so it's in git
-git add _release.sql
+git add release/_release.sql
 # Final commit
 git commit -m "Post release cleanup"
 git push
+
+
+# View changes
+open https://github.com/martindsouza/pres-oracle-release-demo

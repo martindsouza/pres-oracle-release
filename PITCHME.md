@@ -49,6 +49,9 @@ Simplify Oracle release process
 
 @far[question-circle fa-6x]
 
+Note:
+ - All items are linked
+
 ---?include=modular/about/PITCHME.md
 
 ---

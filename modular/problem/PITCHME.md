@@ -30,7 +30,8 @@
 
 Note:
 - We need to understand where you are before understanding where you're going
-
+- Be honest about where you are
+  
 ---
 
 @snap[north span-100]
@@ -69,3 +70,5 @@ Note:
 @snapend
 
 
+Note:
+  - Important to know where you want to go

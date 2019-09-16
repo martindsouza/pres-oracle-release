@@ -36,6 +36,10 @@ Note:
 - Rename files (`..._v1.sql`)
 @ulend
 
+
+Note:
+- Don't allow you to look at code at a given point in time
+
 --- 
 
 @snap[north span-100 text-center]
@@ -52,10 +56,95 @@ Note:
 @snapend
 
 Note:
+- Devs commit code so all changes are tracked
 - Trunk/Master: Where active code is done
 - Branches: Features or patches
 - Tags: Semantic versioning (major.minor.patch)
   - Anytime code leaves dev it should be tagged
+
+
+---
+@snap[north]
+### @fa[folder-open] Structure
+@snapend
+
+@snap[midpoint text-06 span-100]
+
+| Folder | Re-Runnable | Description | 
+| --- | --- | --- |
+| `/apex` |@fa[sync] | APEX apps * |
+| `/build` | @fa[ban] | Scripts to build release |
+| `/data` |@fa[sync] | Re-runnable data scripts \*  |
+| `/packages` | @fa[sync] |Ex: `pkg_emp.pks` and `pkg_emp.pkb` |
+| @css[text-red text-bold](`/release`) | @fa[times-circle] | _Release specific*_ |
+| @css[text-grey](`/scripts`) | @fa[ban text-grey] | @css[text-grey](Common scripts  | / helpers for developers)  | 
+| `/synonyms` | @fa[sync] | Synonyms |
+| `/views` | @fa[sync] | Views | 
+| `/www` | @fa[ban] | Web files (for APEX) |
+
+@snapend
+
+
+@snap[south span-100 text-06 text-left text-italic]
+\* = More later
+Root path is either `master` (git) or `trunk` (svn)
+@snapend
+
+Note:
+
+---
+
+@snap[north span-100]
+## Structure: `/release`
+@snapend
+
+
+@snap[midpoint span-100]
+
+@ul[no-list-style](false)
+- @fa[glasses] Managed by Devs
+- @fa[trash-alt] Emptied after each release
+- @fa[clipboard-list] `_release.sql` File to execute
+@snapend
+
+
+Note:
+- Avoids need for Release Manager
+
+---?code=assets/src/_release-highlight.sql&lang=sql zoom-07
+
+@snap[north span-100]
+## `_release.sql`
+@snapend
+
+@snap[south span-100]
+@[2-3, zoom-40](Issue specific data / table changes as most changes should have an associated ticket)
+@[6-10, zoom-40](Re-runnable scripts. Can auto generate by scraping directories. Order usually doesn't matter)
+@[13, zoom-40](Re-runnable data scripts are very useful to manage config tables)
+@[16, zoom-20](Helps avoid managing order of re-runnable code)
+@snapend
+
+Note:
+- Iissue specific items talk about "Alter table " etc
+- Auto generated code put placeholders in the code to "START" and "END" place holders.
+
+---?code=assets/src/data_emp.sql&lang=sql zoom-04 code-power
+
+@snap[north span-100]
+## `/data/` Example
+@snapend
+
+@snap[south span-100]
+@[2-5, zoom-30](Array to store all data in text)
+@[8-9, zoom-30]("Define" data)
+@[11-14, zoom-30](Loop over array and set `l_row`)
+@[17-27, zoom-30](`merge` data)
+@css[text-05 text-italic](@gitlink[download](assets/src/data_emp.sql))
+@snapend
+
+Note: 
+- Goal isn't to memorize this but think about how you could implement such a technique (or similar) within your processes
+
 
 ---
 
@@ -68,7 +157,7 @@ Note:
 
 @ul[no-list-style](true)
 - @fa[calendar] ~2 week Dev sprints @note[This is a major culture change. Need to get business units on board. Can be tough but doable]
-- @fa[code] Dev -> Test = @css[text-red text-italic](Manual release)@note[Each time code leaves development it's a release. Fix the srcutps]
+- @fa[code] Dev -> Test = @css[text-red text-italic](Manual release)@note[Each time code leaves development it's a releases]
 - @fa[robot] Test -> ... = Auto release @note[Release from tags]
 @ulend
 
@@ -103,83 +192,7 @@ Note:
 @snapend
 
 Note:
+- Build: APEX export and inject version num
 - When doing the manual release process if encounter errors fix them. Don't need to restart.
 
-
----
-@snap[north]
-### @fa[folder-open] Structure
-@snapend
-
-@snap[midpoint text-06 span-100]
-
-| Folder | Re-Runnable | Description | 
-| --- | --- | --- |
-| `/build` | @fa[ban] | Scripts to build release |
-| `/data` |@fa[sync] | Re-runnable data scripts * |
-| `/packages` | @fa[sync] |Ex: `pkg_emp.pks` and `pkg_emp.pkb` |
-| @css[text-red text-bold](`/release`) | @fa[times-circle] | _Release specific*_ |
-| @css[text-grey](`/scripts`) | @fa[ban text-grey] | @css[text-grey](Common scripts  | / helpers for developers)  | 
-| `/synonyms` | @fa[sync] | Synonyms |
-| `/views` | @fa[sync] | Views | 
-| `/www` | @fa[ban] | Web files (for APEX) |
-
-@snapend
-
-
-@snap[south span-100 text-06 text-left text-italic]
-* = More later
-Root path is either `master` (git) or `trunk` (svn)
-@snapend
-
-Note:
-
----
-
-@snap[north span-100]
-## Structure: `/release`
-@snapend
-
-
-@snap[midpoint span-100]
-
-@ul[no-list-style](false)
-- @fa[glasses] Managed by Devs
-- @fa[trash-alt] Emptied after each release
-- @fa[clipboard-list] `_release.sql` File to execute
-@snapend
-
----?code=assets/src/_release-highlight.sql&lang=sql zoom-07
-
-@snap[north span-100]
-## `_release.sql`
-@snapend
-
-@snap[south span-100]
-@[2-3, zoom-40](Issue specific data / table changes as most changes should have an associated ticket)
-@[6-10, zoom-40](Re-runnable scripts. Can auto generate by scraping directories. Order usually doesn't matter)
-@[13, zoom-40](Re-runnable data scripts are very useful to manage config tables)
-@[16, zoom-20](Helps avoid managing order of re-runnable code)
-@snapend
-
-Note:
-- Iissue specific items talk about "Alter table " etc
-- Auto generated code put placeholders in the code to "START" and "END" place holders.
-
----?code=assets/src/data_emp.sql&lang=sql zoom-04 code-power
-
-@snap[north span-100]
-## `/data/` Script Example
-@snapend
-
-@snap[south span-100]
-@[2-5, zoom-30](Array to store all data in text)
-@[8-9, zoom-30]("Define" data)
-@[11-14, zoom-30](Loop over array and set `l_row`)
-@[17-27, zoom-30](`merge` data)
-@css[text-05 text-italic](@gitlink[download](assets/src/data_emp.sql))
-@snapend
-
-Note: 
-- Goal isn't to memorize this but think about how you could implement such a technique (or similar) within your processes
 
