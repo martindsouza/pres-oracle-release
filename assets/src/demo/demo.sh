@@ -92,9 +92,11 @@ git checkout $GIT_PRE_REL_BRANCH
 
 # Now run the Release manually
 cd release
+
 code _release.sql
 
 
+# Oracle Cloud Proxied Connection
 # Connect to Oracle Cloud and run manually
 /oracle/sqlcl/bin/sqlcl giffy/giffy@localhost:9521/xepdb1
 
