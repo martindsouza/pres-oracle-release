@@ -31,7 +31,7 @@ Note:
 
 
 @ul[](true)
-- Code in DB @note[Storing code within the DB]
+- Develop in DB @note[Storing code within the DB]
 - Folders for version (`/v1/`) @note[Copy and pasting folders for each iteration]
 - Rename files (`..._v1.sql`)
 @ulend
@@ -103,8 +103,8 @@ Note:
 
 @ul[no-list-style](false)
 - @fa[glasses] Managed by Devs
-- @fa[trash-alt] Emptied after each release
 - @fa[clipboard-list] `_release.sql` File to execute
+- @fa[trash-alt] Emptied after each release
 @snapend
 
 

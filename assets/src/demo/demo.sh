@@ -99,7 +99,7 @@ code _release.sql
 /oracle/sqlcl/bin/sqlcl giffy/giffy@localhost:9521/xepdb1
 
 # Backup
-#/oracle/sqlcl/bin/sqlcl giffy/giffy@localhost:32118/xepdb1
+# sqlcl giffy/giffy@localhost:32118/xepdb1
 
 
 # View fixes

@@ -101,4 +101,13 @@ Showing 1 way to do releases
 
 ---?include=modular/conclusion/PITCHME.md
 
+---
+
+@snap[midpoint span-100]
+**Flow-Based Programming for the DB w. Node-RED**
+CON1121
+Moscone West - Room 3020A
+Wed: 12:30 - 1:15
+@snapend
+
 ---?include=modular/contact/PITCHME.md
