@@ -1,6 +1,11 @@
 
 
-## Gitpitch
+# Oracle DB Release Process
+
+Live Slides: [bit.ly/oow19-release](http://bit.ly/oow19-release)
+
+
+## Gitpitch (for Martin)
 
 http://localhost:9090/gitpitch/desktop/manager
 
@@ -26,8 +31,6 @@ docker run -it -d \
   -e PORT=9090 \
 	-p 9090:9090 \
 	gitpitch/desktop:pro
-
-
 
 
 ```
