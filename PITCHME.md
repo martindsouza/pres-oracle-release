@@ -2,9 +2,10 @@
 # Oracle DB Build Process
 @snapend
 
-@snap[south span-40 text-08]
+@snap[south span-100 text-08]
 Martin Giffy D'Souza
 [bit.ly/oow19-release](http://bit.ly/oow19-release)
+[@fab[github] Code](https://github.com/martindsouza/pres-oracle-release)
 @snapend
 
 Note:
