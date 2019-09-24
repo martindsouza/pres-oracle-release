@@ -7,6 +7,8 @@ Live Slides: [bit.ly/oow19-release](http://bit.ly/oow19-release)
 
 ## Gitpitch (for Martin)
 
+[Docs](https://gitpitch.com/docs/)
+
 http://localhost:9090/gitpitch/desktop/manager
 
 http://localhost:9090/gitpitch/desktop
